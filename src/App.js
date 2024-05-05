@@ -15,6 +15,7 @@ const App = () => {
 
   const handleFormSubmit = () => {
     // save data
+    setError('Try save data');
     const json = JSON.stringify(formData);
     try {
       localStorage.setItem('formData', json);
