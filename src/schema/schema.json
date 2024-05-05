@@ -1,0 +1,139 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "createTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "$ref": "#/definitions/Data"
+    },
+    "form": {
+      "type": "string",
+        "default": "60978db2528c953f172de4d0",
+      "readOnly": true
+    }
+  },
+  "definitions": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "funds": {
+          "$ref": "#/definitions/Funds"
+        },
+        "parent": {
+          "$ref": "#/definitions/Parent"
+        },
+        "planholder": {
+          "$ref": "#/definitions/Parent"
+        }
+      }
+    },
+    "Funds": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "oneOf": [
+            {
+              "enum": ["11914"],
+              "title": "11914"
+            },
+            {
+              "enum": ["22222"],
+              "title": "22222"
+            },
+            {
+              "enum": ["33333"],
+              "title": "33333"
+            }
+          ]
+        },
+        "fromCode": {
+          "type": "string",
+          "oneOf": [
+            {
+              "enum": ["11327"],
+              "title": "11327"
+            },
+            {
+              "enum": ["12121"],
+              "title": "12121"
+            },
+            {
+              "enum": ["45454"],
+              "title": "45454"
+            }
+          ]
+        },
+        "fromName": {
+          "type": "string",
+          "oneOf": [
+            {
+              "enum": ["אלטשולר שחם"],
+              "title": "אלטשולר שחם"
+            },
+            {
+              "enum": ["לדחמבד ליגגכ"],
+              "title": "לדחמבד ליגגכ"
+            }
+          ]
+        }
+      }
+    },
+    "Parent": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "sex": {
+          "type": "string",
+          "oneOf": [
+            {
+              "enum": ["male"],
+              "title": "male"
+            },
+            {
+              "enum": ["female"],
+              "title": "female"
+            }
+          ]
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "idStr": {
+          "type": "string"
+        },
+        "mobileNum": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "houseNum": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
