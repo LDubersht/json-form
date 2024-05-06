@@ -1,6 +1,5 @@
 
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "createTime": {
@@ -113,7 +112,8 @@
           "type": "integer"
         },
         "idStr": {
-          "type": "string"
+          "type": "string",
+          "title": "מס' זהות/דרכון"
         },
         "mobileNum": {
           "type": "string"
